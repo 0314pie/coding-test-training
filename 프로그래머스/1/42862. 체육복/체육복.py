@@ -11,5 +11,5 @@ def solution(n, lost, reserve):
             lost.remove(i-1)            
         elif i+1 in lost:
             lost.remove(i+1)
-    print(lost)
+    
     return n - len(lost)
