@@ -1,7 +1,5 @@
 def solution(n, control):
-    con_list = list(control)
-    
-    for i in con_list:
+    for i in control:
         if i == 'w':
             n += 1
         elif i == 's':
