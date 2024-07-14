@@ -16,7 +16,6 @@ class Solution {
                     n -= 10;
                     break;
                 default:
-                    // handle unexpected character if needed
                     break;
             }
         }
