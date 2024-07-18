@@ -1,27 +1,28 @@
+import java.util.*;
+
 class Solution {
     public int[] solution(int[] arr) {
-        int[] stk = new int[arr.length];
-        int idx = 0;
-    
+        Deque<Integer> deque = new ArrayDeque<>();
+        
         int i = 0;
         while (i < arr.length) {
-            if (idx == 0) {
-                stk[idx] = arr[i];
-                idx++;
+            if (deque.isEmpty()) {
+                deque.addLast(arr[i]);
                 i++;
-            } else if (stk[idx - 1] < arr[i]) {
-                stk[idx] = arr[i];
-                idx++;
+            } else if (deque.peekLast() < arr[i]) {
+                deque.addLast(arr[i]);
                 i++;
             } else {
-                idx--;
+                deque.removeLast();
             }
         }
 
-        int[] finalResult = new int[idx];
-        System.arraycopy(stk, 0, finalResult, 0, idx);
+        int[] result = new int[deque.size()];
+        int index = 0;
+        for (int num : deque) {
+            result[index++] = num;
+        }
         
-        return finalResult;
-
+        return result;
     }
 }
