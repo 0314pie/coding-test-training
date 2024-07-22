@@ -1,6 +1,6 @@
 # [level 0] 문자열 여러 번 뒤집기 - 181913 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181913?language=python3) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181913?language=python3#) 
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 07월 22일 15:58:23
+2024년 07월 22일 15:58:31
 
 ### 문제 설명
 
