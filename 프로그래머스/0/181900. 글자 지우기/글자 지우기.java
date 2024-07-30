@@ -1,15 +1,16 @@
-import java.util.Arrays;
-
 class Solution {
-    public String solution(String my_string, int[] indices) {
-        Arrays.sort(indices);
 
-        StringBuilder sb = new StringBuilder(my_string);
-        
-        for (int i = indices.length - 1; i >= 0; i--) {
-            sb.deleteCharAt(indices[i]);
+    public String solution(String my_string, int[] indices) {
+        String answer = "";
+        String[] tmp = my_string.split("");
+
+        for (int i = 0; i < indices.length; i++) {
+            tmp[indices[i]] = "";
         }
-        
-        return sb.toString();
+
+        for (String x : tmp) {
+            answer += x;
+        }
+        return answer;
     }
 }
